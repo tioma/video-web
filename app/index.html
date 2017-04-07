@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="es" ng-app="wiveo" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="es" ng-app="wiveo" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="es" ng-app="wiveo" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es" ng-app="wiveo" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="stylesheets/bootstrap.cyborg.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body class="container-fluid">
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <nav class="navbar navbar-default navbar-fixed-top" ng-init="isCollapsed = true">
+    <div class="container-fluid">
+      <div class="navbar-header" uib-dropdown>
+        <button type="button" class="navbar-toggle collapsed" data-target="#user" aria-expanded="false" ng-click="isCollapsed = !isCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href class="navbar-brand">LOGO</a>
+      </div>
+
+      <!--<div class="collapse navbar-collapse" id="register" aria-expanded="false" uib-collapse="isCollapsed" ng-if="!session.isAuthenticated">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown open" uib-dropdown>
+            <a href="#" class="dropdown-toggle" uib-dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="true"><span uib-dropdown-toggle class="glyphicon glyphicon-user"></span> Solicitar Usuario</a>
+            <ul class="dropdown-menu" role="menu" uib-dropdown-menu>
+              <li ui-sref="register"><a href><span class="glyphicon glyphicon-edit"></span> Formulario de registro</a></li>
+              <li ui-sref="help"><a href><span class="glyphicon glyphicon-question-sign"></span> Ayuda</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>-->
+
+      <!--<div class="collapse navbar-collapse" id="user" aria-expanded="false" uib-collapse="isCollapsed" ng-if="session.isAuthenticated">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav navbar-nav"  ui-sref="lde">
+            <a href><span class="glyphicon"></span> Libre Deuda</a>
+          </li>
+          <li class="nav navbar-nav"  ui-sref="preGate">
+            <a href><span class="glyphicon"></span> Pre - Gate</a>
+          </li>
+          <li class="dropdown open" uib-dropdown>
+            <a href="#" class="dropdown-toggle"  uib-dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="true"><span uib-dropdown-toggle class="glyphicon glyphicon-user"></span> {{ session.fullName }} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" uib-dropdown-menu>
+              <li ng-click="logOut()"><a href ><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>-->
+    </div>
+  </nav>
+
+
+  <div class="row wrapper">
+    <div ui-view></div>
+  </div>
+
+  <footer class="container-fluid footer">
+    <hr>
+    <span class="hidden-xs">ESTE ES EL FOOTER GRANDE</span>
+    <span class="visible-xs">ESTE ES EL FOOTER PEQUEÑO </span>
+  </footer>
+
+  <!--<div>Angular seed app: v<span app-version></span></div>-->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="app.js"></script>
+  <script src="class/video.class.js"></script>
+  <script src="main/main.controller.js"></script>
+  <script src="watch/watch.controller.js"></script>
+  <!--<script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>-->
+</body>
+</html>

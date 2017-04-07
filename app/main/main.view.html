@@ -1,0 +1,20 @@
+<div class="container-fluid">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title">EL HEADING DEL PANEL</div>
+        </div>
+        <div class="panel-body">
+            <div class="video-container" ng-repeat="video in vmMain.unListado" ui-sref="watch({videoId: video.id})">
+                <div class="video-image">
+                    <i class="play-button glyphicon glyphicon-play-circle"></i>
+                </div>
+                <div class="video-content">
+                    {{video.name}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
